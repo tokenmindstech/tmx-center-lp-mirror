@@ -1,0 +1,266 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/core/**",
+              "ui_kits/landing/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Geist|Geist Mono))/i]",
+        "message": "Font not provided by the design system. Available: Geist, Geist Mono."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Brandmark'] > JSXAttribute > JSXIdentifier[name!=/^(?:onDark|height|assetsBase|style|key|ref|className|style|children)$/]",
+        "message": "<Brandmark> doesn't accept that prop. Declared props: onDark, height, assetsBase, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|size|arrow|href|onClick|style|children|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: variant, size, arrow, href, onClick, style, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|secondary|ghost|outline-dark|ghost-dark)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'secondary' | 'ghost' | 'outline-dark' | 'ghost-dark'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<Button> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='DarkCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:white|title|style|children|key|ref|className|style|children)$/]",
+        "message": "<DarkCard> doesn't accept that prop. Declared props: white, title, style, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Eyebrow'] > JSXAttribute > JSXIdentifier[name!=/^(?:onDark|dot|style|children|key|ref|className|style|children)$/]",
+        "message": "<Eyebrow> doesn't accept that prop. Declared props: onDark, dot, style, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='IconBox'] > JSXAttribute > JSXIdentifier[name!=/^(?:solid|size|style|children|key|ref|className|style|children)$/]",
+        "message": "<IconBox> doesn't accept that prop. Declared props: solid, size, style, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Pill'] > JSXAttribute > JSXIdentifier[name!=/^(?:tone|style|children|key|ref|className|style|children)$/]",
+        "message": "<Pill> doesn't accept that prop. Declared props: tone, style, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Pill'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:success|brand|warn)$/]",
+        "message": "<Pill> tone must be one of 'success' | 'brand' | 'warn'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Rail'] > JSXAttribute > JSXIdentifier[name!=/^(?:width|height|style|key|ref|className|style|children)$/]",
+        "message": "<Rail> doesn't accept that prop. Declared props: width, height, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHead'] > JSXAttribute > JSXIdentifier[name!=/^(?:eyebrow|title|lede|onDark|style|key|ref|className|style|children)$/]",
+        "message": "<SectionHead> doesn't accept that prop. Declared props: eyebrow, title, lede, onDark, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:hoverLift|style|children|key|ref|className|style|children)$/]",
+        "message": "<TCard> doesn't accept that prop. Declared props: hoverLift, style, children."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Brandmark": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "DarkCard": {
+        "replaces": []
+      },
+      "Eyebrow": {
+        "replaces": []
+      },
+      "IconBox": {
+        "replaces": []
+      },
+      "Pill": {
+        "replaces": []
+      },
+      "Rail": {
+        "replaces": []
+      },
+      "SectionHead": {
+        "replaces": []
+      },
+      "TCard": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--border",
+      "--border-2",
+      "--border-dark",
+      "--card",
+      "--elevated",
+      "--font",
+      "--glow-magenta",
+      "--glow-magenta-hover",
+      "--grad",
+      "--grad-brand",
+      "--grad-rail",
+      "--grad-soft",
+      "--info",
+      "--lavender",
+      "--magenta",
+      "--mono",
+      "--on-dark",
+      "--on-dark-2",
+      "--paper",
+      "--plum",
+      "--plum-700",
+      "--plum-800",
+      "--plum-ink",
+      "--purple",
+      "--r-lg",
+      "--r-md",
+      "--r-pill",
+      "--r-sm",
+      "--r-xl",
+      "--sh-card",
+      "--sh-dark",
+      "--sh-pop",
+      "--success",
+      "--success-bg",
+      "--t-body-lh",
+      "--t-body-size",
+      "--t-bodyl-lh",
+      "--t-bodyl-size",
+      "--t-display-lh",
+      "--t-display-size",
+      "--t-display-track",
+      "--t-eyebrow-size",
+      "--t-eyebrow-track",
+      "--t-h1-lh",
+      "--t-h1-size",
+      "--t-h1-track",
+      "--t-h2-lh",
+      "--t-h2-size",
+      "--t-h2-track",
+      "--t-h3-lh",
+      "--t-h3-size",
+      "--t-h3-track",
+      "--t-h4-lh",
+      "--t-h4-size",
+      "--t-small-lh",
+      "--t-small-size",
+      "--text",
+      "--text-2",
+      "--text-3",
+      "--w-body",
+      "--w-heading",
+      "--warning",
+      "--warning-bg"
+    ],
+    "tokenKinds": {
+      "--paper": "color",
+      "--elevated": "color",
+      "--lavender": "color",
+      "--card": "color",
+      "--text": "font",
+      "--text-2": "font",
+      "--text-3": "font",
+      "--on-dark": "color",
+      "--on-dark-2": "color",
+      "--plum": "color",
+      "--plum-800": "color",
+      "--plum-700": "color",
+      "--plum-ink": "color",
+      "--purple": "color",
+      "--magenta": "color",
+      "--success": "color",
+      "--success-bg": "color",
+      "--info": "color",
+      "--warning": "color",
+      "--warning-bg": "color",
+      "--border": "color",
+      "--border-2": "color",
+      "--border-dark": "color",
+      "--grad": "color",
+      "--grad-soft": "color",
+      "--grad-rail": "color",
+      "--grad-brand": "color",
+      "--font": "font",
+      "--mono": "font",
+      "--t-display-size": "spacing",
+      "--t-display-lh": "other",
+      "--t-display-track": "other",
+      "--t-h1-size": "spacing",
+      "--t-h1-lh": "other",
+      "--t-h1-track": "other",
+      "--t-h2-size": "spacing",
+      "--t-h2-lh": "other",
+      "--t-h2-track": "other",
+      "--t-h3-size": "spacing",
+      "--t-h3-lh": "other",
+      "--t-h3-track": "other",
+      "--t-h4-size": "spacing",
+      "--t-h4-lh": "other",
+      "--t-bodyl-size": "spacing",
+      "--t-bodyl-lh": "other",
+      "--t-body-size": "spacing",
+      "--t-body-lh": "other",
+      "--t-small-size": "spacing",
+      "--t-small-lh": "other",
+      "--t-eyebrow-size": "spacing",
+      "--t-eyebrow-track": "other",
+      "--w-heading": "other",
+      "--w-body": "other",
+      "--r-sm": "spacing",
+      "--r-md": "spacing",
+      "--r-lg": "spacing",
+      "--r-xl": "spacing",
+      "--r-pill": "spacing",
+      "--sh-card": "shadow",
+      "--sh-pop": "shadow",
+      "--sh-dark": "shadow",
+      "--glow-magenta": "shadow",
+      "--glow-magenta-hover": "shadow"
+    },
+    "fontFamilies": [
+      "Geist",
+      "Geist Mono"
+    ]
+  }
+}

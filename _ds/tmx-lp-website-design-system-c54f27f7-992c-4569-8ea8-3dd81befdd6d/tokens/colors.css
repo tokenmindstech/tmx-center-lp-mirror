@@ -1,0 +1,41 @@
+/* TMX Website / Landing Page — color tokens */
+:root {
+  /* backgrounds */
+  --paper: #F7F5FA;        /* page background */
+  --elevated: #F4F0F9;     /* alt / raised sections */
+  --lavender: #EDE7F6;     /* tint panel behind visuals */
+  --card: #FFFFFF;         /* standard card surface */
+
+  /* text */
+  --text: #111827;         /* headlines, key copy */
+  --text-2: #6B7280;       /* body, supporting copy */
+  --text-3: #9CA3AF;       /* captions, labels */
+  --on-dark: #FFFFFF;      /* text over plum */
+  --on-dark-2: rgba(247,245,250,.72); /* secondary text over plum */
+
+  /* brand */
+  --plum: #2C0740;         /* deep plum — dark brand anchor */
+  --plum-800: #37144C;     /* plum section surface */
+  --plum-700: #4A1E63;     /* plum card / hover on dark */
+  --plum-ink: #20052E;     /* deepest gradient stop */
+  --purple: #7C3AED;       /* accent purple — links, accents, icons */
+  --magenta: #D62DFD;      /* gradient endpoint, highlights */
+
+  /* semantic — sparingly, brand always leads */
+  --success: #16A34A;
+  --success-bg: #DCFCE7;
+  --info: #7C3AED;
+  --warning: #B45309;
+  --warning-bg: #FEF3C7;
+
+  /* lines & borders */
+  --border: #E9E4F0;       /* card hairline on light */
+  --border-2: #DED7EA;     /* stronger divider */
+  --border-dark: rgba(255,255,255,.14); /* border on plum */
+
+  /* signature gradients */
+  --grad: linear-gradient(135deg,#7C3AED 0%,#D62DFD 100%); /* @kind color */
+  --grad-soft: linear-gradient(135deg,#8B4BF0 0%,#D62DFD 100%); /* @kind color */
+  --grad-rail: linear-gradient(90deg,#7C3AED 0%,#D62DFD 100%); /* @kind color */
+  --grad-brand: radial-gradient(120% 120% at 15% 0%,#4A1E63 0%,#2C0740 55%,#20052E 100%); /* @kind color */
+}
